@@ -3,178 +3,944 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abhijit Patil - SEBI Registered Research Analyst Abhijit Patil</title>
+  <title>Abhijit Patil - SEBI Registered Research Analyst</title>
   <meta name="description" content="School of Stock Market - SEBI Registered Research Analyst Abhijit Patil (INH000021304, BSE Enlistment 6585). Research-backed, honest investment education for every Indian."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b1220; /* deep navy */
-      --card:#111a2e; /* card surface */
+      --bg:#0b1220;
+      --card:#111a2e;
       --card-2:#0f1627;
-      --text:#e9eefb; /* near-white */
-      --muted:#9db0d1; /* muted text */
-      --brand:#5cc8ff; /* cyan */
-      --brand-2:#8a6bff; /* purple */
-      --accent:#2ee59d; /* green accent */
-      --danger:#ff6b6b; /* red */
-      --warning:#ffd166; /* amber */
+      --text:#e9eefb;
+      --muted:#9db0d1;
+      --brand:#5cc8ff;
+      --brand-2:#8a6bff;
+      --accent:#2ee59d;
+      --danger:#ff6b6b;
+      --warning:#ffd166;
       --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,.4);
       --radius-2xl: 22px;
       --radius-xl: 16px;
       --radius-lg: 12px;
+      --wa:#25D366;
+      --white:#fff;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 10% -10%, rgba(92,200,255,.15), transparent 60%),
-                                        radial-gradient(900px 700px at 90% 10%, rgba(138,107,255,.14), transparent 60%),
-                                        var(--bg);
-              color:var(--text);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{opacity:.9}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.8);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
-    .brand .logo{width:36px;height:36px;border-radius:50%;background:conic-gradient(from 180deg, var(--brand), var(--brand-2));box-shadow:0 6px 18px rgba(92,200,255,.35)}
-    .nav-links{display:flex;align-items:center;gap:18px}
-    .nav-links a{padding:8px 12px;border-radius:10px;color:var(--text)}
-    .nav-links a:hover{background:rgba(255,255,255,.05)}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#001b2e;padding:10px 16px;border:none;border-radius:999px;font-weight:700;box-shadow:0 10px 20px rgba(92,200,255,.25);cursor:pointer}
+    * {
+      box-sizing: border-box;
+    }
 
-    /* Mobile nav */
-    .burger{display:none;flex-direction:column;gap:5px}
-    .burger span{width:24px;height:2px;background:var(--text);display:block;border-radius:2px}
-    .mobile-menu{display:none;flex-direction:column;padding:12px 0;border-top:1px solid rgba(255,255,255,.06)}
-    .mobile-menu a{padding:12px;border-radius:10px;color:var(--text)}
-    .mobile-menu a:hover{background:rgba(255,255,255,.05)}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(92,200,255,.15), transparent 60%),
+                  radial-gradient(900px 700px at 90% 10%, rgba(138,107,255,.14), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-    /* Hero */
-    .hero{padding:72px 0 36px}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(92,200,255,.12);border:1px solid rgba(92,200,255,.35);padding:6px 10px;border-radius:999px;color:#bfe8ff;font-weight:600}
-    .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:16px 0 10px}
-    .hero p{color:var(--muted);max-width:800px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#06121f;border:none}
-    .btn.ghost:hover{background:rgba(255,255,255,.08)}
+    a {
+      color: var(--brand);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
 
-    /* Sections */
-    section{padding:56px 0}
-    .section-title{font-size:24px;margin:0 0 18px}
-    .grid{display:grid;gap:20px}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-2{grid-template-columns:repeat(2,1fr)}
+    a:hover {
+      opacity: 0.9;
+    }
 
-    /* Cards */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.07);border-radius:var(--radius-2xl);box-shadow:var(--shadow);padding:20px}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-    /* About */
-    .about .lead{color:var(--muted)}
+    /* Enhanced Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,18,32,.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: all 0.3s ease;
+    }
 
-    /* SEBI details table */
-    table{width:100%;border-collapse:separate;border-spacing:0 10px}
-    th, td{text-align:left;padding:14px 16px}
-    thead th{font-size:14px;color:#b7c6e4;text-transform:uppercase;letter-spacing:.08em}
-    tbody tr{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-    tbody tr:first-child td:first-child{border-top-left-radius:12px}
-    tbody tr:first-child td:last-child{border-top-right-radius:12px}
-    tbody tr:last-child td:first-child{border-bottom-left-radius:12px}
-    tbody tr:last-child td:last-child{border-bottom-right-radius:12px}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 12px;
+    }
 
-    /* Plans */
-    .plans .card{position:relative;overflow:hidden}
-    .price{font-size:32px;font-weight:800;letter-spacing:.2px}
-    .period{opacity:.8;font-weight:600;margin-left:6px}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#cfe0ff;margin:6px 6px 12px 0}
-    .risk-low{background:rgba(46,229,157,.12);border-color:rgba(46,229,157,.4)}
-    .risk-mod{background:rgba(255,209,102,.12);border-color:rgba(255,209,102,.4)}
-    .risk-high{background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.4)}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
 
-    /* Contact */
-    .contact .info{display:grid;gap:14px}
-    .contact .info div{display:flex;gap:12px;align-items:flex-start}
-    .contact .info b{min-width:110px;color:#cfe0ff}
+    .brand .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--brand), var(--brand-2));
+      box-shadow: 0 8px 20px rgba(92,200,255,.4);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
 
-    /* Footer */
-    footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0 60px;color:var(--muted)}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 2fr;gap:20px}
-    .small{font-size:13px;color:var(--muted)}
+    @keyframes glow {
+      0% { box-shadow: 0 8px 20px rgba(92,200,255,.4); }
+      100% { box-shadow: 0 8px 25px rgba(92,200,255,.6); }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      padding: 10px 16px;
+      border-radius: 12px;
+      color: var(--text);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateY(-1px);
+    }
+
+    .nav-links a:hover::before {
+      left: 100%;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #001b2e;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(92,200,255,.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(92,200,255,.4);
+    }
+
+    /* Mobile Navigation */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .burger:hover {
+      background: rgba(255,255,255,.05);
+    }
+
+    .burger span {
+      width: 24px;
+      height: 3px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .burger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(11,18,32,.95);
+      backdrop-filter: blur(20px);
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 16px 20px;
+      border-radius: 12px;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateX(8px);
+    }
+
+    /* Enhanced Hero */
+    .hero {
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 150%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(92,200,255,.08), transparent 70%);
+      transform: translateX(-50%);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0px); }
+      50% { transform: translateX(-50%) translateY(-20px); }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(92,200,255,.15);
+      border: 1px solid rgba(92,200,255,.4);
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: #bfe8ff;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+      animation: slideInUp 0.8s ease-out;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.1;
+      margin: 24px 0 16px;
+      font-weight: 900;
+      position: relative;
+      z-index: 2;
+      animation: slideInUp 0.8s ease-out 0.2s both;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 600px;
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.7;
+      position: relative;
+      z-index: 2;
+      animation: slideInUp 0.8s ease-out 0.4s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      position: relative;
+      z-index: 2;
+      animation: slideInUp 0.8s ease-out 0.6s both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #06121f;
+      border: none;
+      box-shadow: 0 10px 25px rgba(92,200,255,.25);
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(92,200,255,.35);
+    }
+
+    .btn.ghost:hover {
+      background: rgba(255,255,255,.12);
+      transform: translateY(-2px);
+    }
+
+    /* Enhanced Sections */
+    section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 4vw, 36px);
+      margin: 0 0 24px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--text), var(--muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    /* Enhanced Cards */
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(92,200,255,.2);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Enhanced Table */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    }
+
+    thead {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    }
+
+    th {
+      padding: 20px;
+      text-align: left;
+      font-weight: 700;
+      color: #001b2e;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    tbody tr {
+      background: rgba(255,255,255,.06);
+      transition: all 0.3s ease;
+    }
+
+    tbody tr:hover {
+      background: rgba(255,255,255,.1);
+      transform: scale(1.02);
+    }
+
+    td {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+
+    /* Enhanced Pricing */
+    .pricing-section {
+      padding: 80px 20px;
+      background: linear-gradient(180deg, transparent, rgba(92,200,255,.02));
+    }
+
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-2xl);
+      padding: 40px 28px;
+      box-shadow: var(--shadow);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 25px 50px rgba(0,0,0,.3);
+      border-color: rgba(92,200,255,.3);
+    }
+
+    .pricing-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .pricing-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      color: var(--text);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .pricing-card .capital {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .pricing-card .price {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--brand);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pricing-card .price span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-left: 6px;
+    }
+
+    .pricing-card .risk {
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid;
+      width: 100%;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    /* Enhanced Contact Form */
+    .contact form {
+      margin-top: 24px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      margin-bottom: 16px;
+    }
+
+    .contact input:focus,
+    .contact textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(92,200,255,.2);
+      background: rgba(255,255,255,.08);
+    }
+
+    .contact input::placeholder,
+    .contact textarea::placeholder {
+      color: var(--muted);
+    }
+
+    /* WhatsApp Widget */
+    .wa-toggle {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: var(--wa);
+      box-shadow: 0 12px 30px rgba(37,211,102,.4);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      border: none;
+      z-index: 9999;
+      transition: all 0.3s ease;
+    }
+
+    .wa-toggle:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(37,211,102,.5);
+    }
+
+    .wa-toggle::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(37,211,102,.6);
+      animation: pulse 2.5s ease-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
+      70% { box-shadow: 0 0 0 25px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    .wa-toggle svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--white);
+    }
+
+    /* Enhanced Footer */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 60px 0;
+      background: linear-gradient(180deg, transparent, rgba(11,18,32,.6));
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
 
     /* Utilities */
-    .highlight{background:linear-gradient(90deg, rgba(92,200,255,.2), rgba(138,107,255,.2));padding:2px 6px;border-radius:8px}
-    .muted{color:var(--muted)}
-    .hidden{display:none}
-
-    /* Responsive */
-    @media (max-width: 960px){
-      .grid-3{grid-template-columns:1fr 1fr}
-      .grid-2{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr 1fr}
-      .nav-links{display:none}
-      .burger{display:flex}
-      .mobile-menu{display:flex}
+    .highlight {
+      background: linear-gradient(135deg, rgba(92,200,255,.25), rgba(138,107,255,.25));
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-weight: 700;
     }
-    @media (max-width: 640px){
-      .grid-3{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Risk color variations */
+    .risk-moderate {
+      background: rgba(255,209,102,.15);
+      border-color: rgba(255,209,102,.4);
+      color: var(--warning);
+    }
+
+    .risk-high {
+      background: rgba(255,107,107,.15);
+      border-color: rgba(255,107,107,.4);
+      color: var(--danger);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 24px;
+      }
+      
+      .pricing-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .burger {
+        display: flex;
+      }
+      
+      .hero {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      
+      .section-title {
+        text-align: center;
+      }
+      
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      
+      .pricing-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+      
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      
+      .hero {
+        padding: 60px 0 40px;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+      }
+      
+      .nav {
+        height: 60px;
+      }
+      
+      .brand {
+        font-size: 16px;
+      }
+      
+      .brand .logo {
+        width: 36px;
+        height: 36px;
+      }
+      
+      .wa-toggle {
+        right: 16px;
+        bottom: 16px;
+        width: 60px;
+        height: 60px;
+      }
+      
+      .wa-toggle svg {
+        width: 28px;
+        height: 28px;
+      }
+      
+      table {
+        font-size: 14px;
+      }
+      
+      th, td {
+        padding: 12px 8px;
+      }
+    }
+
+    /* Scroll animations */
+    @media (prefers-reduced-motion: no-preference) {
+      .card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .card:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    /* Enhanced form styling */
+    .contact .grid input {
+      margin-bottom: 0;
+    }
+
+    .contact .grid {
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* Loading animation for CTA buttons */
+    .btn.loading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .btn.loading::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 2px solid transparent;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-left: 8px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus styles for better accessibility */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
     }
   </style>
 </head>
 <body>
   <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span><a href="ResearchAnalyst.html">Abhijit Patil</a></span>
+      </div>
 
-<header>
+      <!-- Desktop Nav -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="ResearchAnalyst.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="investerCharter.html">Investment Charter</a>
+        <a href="complaintsTables.html">Complaints Table</a>
+        <a href="GrievanceRedressal.html">Grievance Redressal</a>
+        <a href="Disclaimer.html" class="cta">Disclaimer</a>
+      </nav>
 
-  <div class="container nav">
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <span>Abhijit Patil</span>
+      <!-- Hamburger Button -->
+      <button class="burger" id="burger" aria-label="Toggle Menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
 
-    <!-- Desktop Nav -->
-    <nav class="nav-links" aria-label="Primary">
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
       <a href="ResearchAnalyst.html">Home</a>
-      <a href="ResearchAnalyst.html">About Us</a>
-      <a href="investerCharter.html">Investment Charter </a>
+      <a href="pricing.html">Pricing</a>
+      <a href="investerCharter.html">Investment Charter</a>
       <a href="complaintsTables.html">Complaints Table</a>
       <a href="GrievanceRedressal.html">Grievance Redressal</a>
-    
-      <a href="Disclaimer.html" class="cta" title="Get Started">Disclaimer</a>
-      
+      <a href="Disclaimer.html">Disclaimer</a>
     </nav>
+  </header>
 
-    <!-- Hamburger Button -->
-    <div class="burger" id="burger" aria-label="Toggle Menu" aria-controls="mobile-menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav class="mobile-menu hidden" id="mobile-menu">
-    <a href="ResearchAnalyst.html">Home</a>
-    <a href="ResearchAnalyst.html">About Us</a>
-    <a href="investerCharter.html">Investment Charter</a>
-    <a href="complaintsTables.html">Complaints Table</a>
-    <a href="GrievanceRedressal.html">Grievance Redressal</a>
-    <a href="Disclaimer.html">Disclaimer</a>
-  </nav>
-</header>
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <span class="badge">SEBI Registered Research Analyst • <span class="highlight">INH000021304</span></span>
+      <span class="badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 12l2 2 4-4"/>
+          <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+        </svg>
+        SEBI Registered Research Analyst • <span class="highlight">INH000021304</span>
+      </span>
       <h1>Empower Your Financial Future with <span class="highlight">Abhijit Patil</span></h1>
-      <p class="muted">At Patil Research, we bridge the gap between academic financial theory and real-world investing. Our mission is to break myths, cut through noise, and empower every investor to take control of their financial future — not with shortcuts, but with substance.</p>
+      <p>At Patil Research, we bridge the gap between academic financial theory and real-world investing. Our mission is to break myths, cut through noise, and empower every investor to take control of their financial future — not with shortcuts, but with substance.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="https://schoolofstockmarket.com">Start Your Journey</a>
-        <a class="btn ghost" href="#about">Learn More</a>
+        <a class="btn primary" href="#contact">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L2 8.5l9.5 4 4 9.5z"/>
+          </svg>
+          Get Consultation
+        </a>
       </div>
-      <div style="margin-top:24px" class="small">Quick Links: <a href="#mission">Our Mission</a> • <a href="#about">About Us</a> • <a href="#sebi">SEBI Details</a> • <a href="Disclaimer.html">Disclaimer</a></div>
+      <div style="margin-top:32px" class="small">
+        Quick Links: <a href="#mission">Our Mission</a> • <a href="#about">About Us</a> • <a href="#sebi">SEBI Details</a> • <a href="Disclaimer.html">Disclaimer</a>
+      </div>
     </div>
   </section>
 
@@ -183,35 +949,70 @@
     <div class="container grid grid-2">
       <div class="card">
         <h2 class="section-title">About Patil Research</h2>
-       <p class="lead">
-  At Patil Research, we are committed to delivering independent, research-backed, and SEBI-compliant investment insights that empower individuals to make informed financial decisions.
-</p>
+        <p class="lead muted">
+          At Patil Research, we are committed to delivering independent, research-backed, and SEBI-compliant investment insights that empower individuals to make informed financial decisions.
+        </p>
 
-<p>
-  Founded by Abhijit Patil, a SEBI-Registered Research Analyst, our mission is simple: to provide transparent, honest, and practical stock market research that cuts through market noise and helps investors build long-term wealth with confidence.
-</p>
+        <p>
+          Founded by Abhijit Patil, a SEBI-Registered Research Analyst, our mission is simple: to provide transparent, honest, and practical stock market research that cuts through market noise and helps investors build long-term wealth with confidence.
+        </p>
 
-<p><strong>Why Choose Us?</strong></p>
-<ul>
-  <li><strong>Independent Research –</strong> Unbiased stock recommendations and analysis based on facts, not hype.</li>
-  <li><strong>SEBI-Compliant Approach –</strong> Every report and recommendation follows strict regulatory standards.</li>
-  <li><strong>Focused on Investors –</strong> Helping you achieve clarity in your financial journey, whether you are a new investor or a seasoned trader.</li>
-  <li><strong>Knowledge-Driven –</strong> We explain not just what to invest in, but also why.</li>
-</ul>
+        <div style="margin: 24px 0;">
+          <h4 style="color: var(--brand); margin-bottom: 16px;">Why Choose Us?</h4>
+          <div class="feature-list">
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <div>
+                <strong>Independent Research</strong> – Unbiased stock recommendations and analysis based on facts, not hype.
+              </div>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <div>
+                <strong>SEBI-Compliant Approach</strong> – Every report and recommendation follows strict regulatory standards.
+              </div>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <div>
+                <strong>Focused on Investors</strong> – Helping you achieve clarity in your financial journey, whether you are a new investor or a seasoned trader.
+              </div>
+            </div>
+            <div class="feature-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <div>
+                <strong>Knowledge-Driven</strong> – We explain not just what to invest in, but also why.
+              </div>
+            </div>
+          </div>
+        </div>
 
-<p>
-  Our philosophy is <em>“Research with Responsibility.”</em> We believe investment decisions must be built on substance, not speculation. Every recommendation is backed by in-depth analysis, financial discipline, and ethical responsibility.
-</p>
+        <div class="quote-box">
+          <blockquote>
+            <em>"Research with Responsibility."</em> We believe investment decisions must be built on substance, not speculation. Every recommendation is backed by in-depth analysis, financial discipline, and ethical responsibility.
+          </blockquote>
+        </div>
 
-<p>
-  At Patil Research, the goal is not just to give advice — but to empower investors to take control of their financial future with trust, knowledge, and confidence.
-</p>
+        <p>
+          At Patil Research, the goal is not just to give advice — but to empower investors to take control of their financial future with trust, knowledge, and confidence.
+        </p>
       </div>
 
       <div class="card" id="sebi">
         <h2 class="section-title">SEBI Registration Details</h2>
-        <div class="small muted" style="margin-bottom:10px">Office of Investor Assistance and Education, Securities and Exchange Board of India, SEBI Bhavan, Plot No. C4‑A, 'G' Block, Bandra‑Kurla Complex, Bandra (E), Mumbai – 400 051</div>
-        <div style="overflow:auto">
+        <div class="small muted" style="margin-bottom: 20px; padding: 16px; background: rgba(92,200,255,.08); border-radius: 12px; border-left: 4px solid var(--brand);">
+          <strong>SEBI Office Address:</strong><br>
+          Office of Investor Assistance and Education, Securities and Exchange Board of India, SEBI Bhavan, Plot No. C4‑A, 'G' Block, Bandra‑Kurla Complex, Bandra (E), Mumbai – 400 051
+        </div>
+        <div style="overflow: auto; border-radius: 16px;">
           <table aria-label="SEBI Registration Details">
             <thead>
               <tr>
@@ -222,9 +1023,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>Abhijit Patil</td>
-                <td>INH000021304</td>
-                <td>6585</td>
+                <td><strong>Abhijit Patil</strong></td>
+                <td><strong>INH000021304</strong></td>
+                <td><strong>6585</strong></td>
               </tr>
             </tbody>
           </table>
@@ -238,45 +1039,187 @@
     <div class="container">
       <div class="card">
         <h2 class="section-title">Our Mission</h2>
-        <p class="muted">Transforming financial education in India through integrity, clarity, and purpose.</p>
+        <p class="muted" style="font-size: 18px; text-align: center; margin-bottom: 32px;">
+          Transforming financial education in India through integrity, clarity, and purpose.
+        </p>
         
-        <div class="grid grid-2" style="margin-top:18px">
+        <div class="grid grid-2" style="margin-top: 32px;">
           <div>
-            <h3>What We Stand For</h3>
-            <ul class="muted" style="margin-left:18px;line-height:1.8">
-              <li><strong>Integrity:</strong> Every recommendation is backed by thorough analysis, unbiased judgment, and professional responsibility.
-</li>
-              <li><strong>Clarity:</strong> Breaking complex financial concepts into simple, actionable insights that investors can trust.
-</li>
-              <li><strong>Purpose:</strong> Helping investors cut through market noise and focus on long-term wealth creation. </li>
-              <li><strong>Accessibility:</strong> Making quality research and financial knowledge available to every Indian, regardless of background.</li>
-            </ul>
+            <h3 style="color: var(--brand); margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              What We Stand For
+            </h3>
+            <div class="values-list">
+              <div class="value-item">
+                <div class="value-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"/>
+                    <circle cx="12" cy="12" r="9"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Integrity:</strong> Every recommendation is backed by thorough analysis, unbiased judgment, and professional responsibility.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Clarity:</strong> Breaking complex financial concepts into simple, actionable insights that investors can trust.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Purpose:</strong> Helping investors cut through market noise and focus on long-term wealth creation.
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Accessibility:</strong> Making quality research and financial knowledge available to every Indian, regardless of background.
+                </div>
+              </div>
+            </div>
           </div>
           <div>
-  <h3>Our Approach</h3>
-  <p>
-    At Patil Research, our approach is guided by integrity, discipline, and investor-first values.
-  </p>
-  <ul class="muted" style="margin-left:18px; line-height:1.8">
-    <li>
-      <strong>Research-Backed & Honest Insights</strong><br>
-      Every recommendation is built on rigorous analysis, independent research, and a commitment to truth — not speculation or hype.
-    </li>
-    <li>
-      <strong>Bridging Theory with Real-World Investing</strong><br>
-      We connect academic financial principles with practical, real-world applications to simplify decision-making for investors at every level.
-    </li>
-    <li>
-      <strong>Regulatory Compliance & Ethical Responsibility</strong><br>
-      As a SEBI-Registered Research Analyst, we uphold the highest standards of compliance, transparency, and ethics in every report and recommendation.
-    </li>
-    <li>
-      <strong>Focus on Risk Management & Wealth Creation</strong><br>
-      Our philosophy emphasizes long-term wealth building through careful risk management, helping investors achieve stability as well as growth.
-    </li>
-  </ul>
-</div>
+            <h3 style="color: var(--brand); margin-bottom: 20px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              Our Approach
+            </h3>
+            <p style="margin-bottom: 20px;">
+              At Patil Research, our approach is guided by integrity, discipline, and investor-first values.
+            </p>
+            <div class="approach-list">
+              <div class="approach-item">
+                <strong>Research-Backed & Honest Insights</strong><br>
+                <span class="muted">Every recommendation is built on rigorous analysis, independent research, and a commitment to truth — not speculation or hype.</span>
+              </div>
+              <div class="approach-item">
+                <strong>Bridging Theory with Real-World Investing</strong><br>
+                <span class="muted">We connect academic financial principles with practical, real-world applications to simplify decision-making for investors at every level.</span>
+              </div>
+              <div class="approach-item">
+                <strong>Regulatory Compliance & Ethical Responsibility</strong><br>
+                <span class="muted">As a SEBI-Registered Research Analyst, we uphold the highest standards of compliance, transparency, and ethics in every report and recommendation.</span>
+              </div>
+              <div class="approach-item">
+                <strong>Focus on Risk Management & Wealth Creation</strong><br>
+                <span class="muted">Our philosophy emphasizes long-term wealth building through careful risk management, helping investors achieve stability as well as growth.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title">Pick the Perfect Plan to Match Your Financial Goals</h2>
+      <div class="pricing-container">
+        <!-- Equity -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="margin-bottom: 16px;">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+            <h3>Equity</h3>
+          </div>
+          <p class="capital">Capital required: Minimum 2-3 Lakhs</p>
+          <div class="price">₹9,000<span> /Qtly</span></div>
+          <div class="risk risk-moderate">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Risk - Moderate
+          </div>
+        </div>
+
+        <!-- Futures -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="margin-bottom: 16px;">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <h3>Futures (Index & Equity)</h3>
+          </div>
+          <p class="capital">Capital required: Minimum 4-6 Lakhs</p>
+          <div class="price">₹12,000<span> /Qtly</span></div>
+          <div class="risk risk-high">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            Risk - Moderate To High
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div class="pricing-header">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="margin-bottom: 16px;">
+              <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+            </svg>
+            <h3>Options (Index)</h3>
+          </div>
+          <p class="capital">Capital required: Minimum 1-2 Lakhs</p>
+          <div class="price">₹15,000<span> /Qtly</span></div>
+          <div class="risk risk-high">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Risk - High
+          </div>
+        </div>
+
+        <!-- Commodity -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="margin-bottom: 16px;">
+              <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+            <h3>Commodity</h3>
+          </div>
+          <p class="capital">Capital required: Minimum 2-4 Lakhs</p>
+          <div class="price">₹18,000<span> /Qtly</span></div>
+          <div class="risk risk-high">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            Risk - Moderate To High
+          </div>
         </div>
       </div>
     </div>
@@ -286,285 +1229,549 @@
   <section id="contact" class="contact">
     <div class="container grid grid-2">
       <div class="card" id="get-consultation">
-        <h2 class="section-title">Get Started</h2>
-        <p class="muted">Ready to transform your financial future? Get in touch with us.</p>
-        <div class="info" style="margin-top:16px">
-          <div><b>Email</b><span><a href="mailto:abhipatilca@hotmail.com">abhipatilca@hotmail.com</a></span></div>
+        <div class="contact-header">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" style="margin-bottom: 16px;">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <h2 class="section-title">Get Started</h2>
         </div>
-        <form style="margin-top:18px" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.'); this.reset();">
-          <div class="grid grid-2">
-            <input aria-label="Name" required placeholder="Your Name" style="padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)">
-            <input aria-label="Phone" required placeholder="Phone" pattern="[+0-9\s-]{7,15}" style="padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)">
+        <p class="muted">Ready to transform your financial future? Get in touch with us.</p>
+        
+        <div class="contact-info">
+          <div class="info-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span><a href="mailto:abhipatilca@hotmail.com">abhipatilca@hotmail.com</a></span>
           </div>
-          <input aria-label="Email" type="email" placeholder="Email" required style="margin-top:12px;width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)">
-          <textarea aria-label="Message" required placeholder="Tell us about your financial goals" rows="4" style="margin-top:12px;width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)"></textarea>
-          <button class="btn primary" type="submit" style="margin-top:12px">Start Learning</button>
+        </div>
+
+        <form style="margin-top: 24px;" onsubmit="handleFormSubmit(event)">
+          <div class="grid grid-2">
+            <input aria-label="Name" required placeholder="Your Name" type="text" name="name">
+            <input aria-label="Phone" required placeholder="Phone" pattern="[+0-9\s-]{7,15}" type="tel" name="phone">
+          </div>
+          <input aria-label="Email" type="email" placeholder="Email" required name="email">
+          <textarea aria-label="Message" required placeholder="Tell us about your financial goals" rows="4" name="message"></textarea>
+          <button class="btn primary" type="submit" id="submitBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L2 8.5l9.5 4 4 9.5z"/>
+            </svg>
+            Start Learning
+          </button>
         </form>
       </div>
 
       <div class="card" id="legal">
-       <h2 class="section-title">Disclaimer</h2>
-<p class="muted">
-  The information provided on this website is for educational and informational purposes only and should not be considered as investment advice.
-</p>
-<ul class="muted" style="margin-left:18px; line-height:1.8">
-  <li>We do not provide guaranteed or assured returns.</li>
-  <li>Investments in the securities market are subject to market risks.</li>
-  <li>Past performance is not indicative of future results.</li>
-  <li>Investors are advised to read all related documents carefully before making any investment decisions.</li>
-</ul>
-<p class="muted">
-  As a SEBI-Registered Research Analyst (<strong>Registration No.: INH000021304</strong>), all research reports, recommendations, and insights published here are prepared in compliance with SEBI regulations and ethical standards.
-</p>
-<p class="muted">
-  By accessing this website, you acknowledge and agree that you are solely responsible for your investment decisions.
-</p>
+        <div class="contact-header">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" style="margin-bottom: 16px;">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <h2 class="section-title">Disclaimer</h2>
+        </div>
+        <p class="muted">
+          The information provided on this website is for educational and informational purposes only and should not be considered as investment advice.
+        </p>
+        
+        <div class="disclaimer-points">
+          <div class="disclaimer-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+            We do not provide guaranteed or assured returns.
+          </div>
+          <div class="disclaimer-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Investments in the securities market are subject to market risks.
+          </div>
+          <div class="disclaimer-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            Past performance is not indicative of future results.
+          </div>
+          <div class="disclaimer-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14,2 14,8 20,8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10,9 9,9 8,9"/>
+            </svg>
+            Investors are advised to read all related documents carefully before making any investment decisions.
+          </div>
+        </div>
 
-        <div class="grid grid-2" style="margin-top:12px">
+        <div class="sebi-highlight">
+          <p>
+            As a SEBI-Registered Research Analyst (<strong>Registration No.: INH000021304</strong>), all research reports, recommendations, and insights published here are prepared in compliance with SEBI regulations and ethical standards.
+          </p>
+        </div>
+
+        <p class="muted" style="margin-top: 20px;">
+          By accessing this website, you acknowledge and agree that you are solely responsible for your investment decisions.
+        </p>
+
+        <div class="grid grid-2" style="margin-top: 24px;">
           <div>
-            <h4>Quick Links</h4>
-            <ul class="muted" style="margin-left:18px;line-height:1.9">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="investerCharter.html">Investor Charter</a></li>
-              <li><a href="#sebi">SEBI Details</a></li>
-              <li><a href="#footer">Contact</a></li>
-            </ul>
+            <h4 style="color: var(--brand); margin-bottom: 16px;">Quick Links</h4>
+            <div class="link-list">
+              <a href="#about">About Us</a>
+              <a href="investerCharter.html">Investor Charter</a>
+              <a href="#sebi">SEBI Details</a>
+              <a href="#contact">Contact</a>
+            </div>
           </div>
           <div>
-            <h4>Policies</h4>
-            <ul class="muted" style="margin-left:18px;line-height:1.9">
-              <li><a href="privacypolicy.html">Privacy Policy</a></li>
-              <li><a href="RefundPolicy.html">Refund Policy</a></li>
-              <li><a href="TermsAndConditions.html">Terms and Conditions</a></li>
-              <li><a href="Disclaimer.html">Disclaimer</a></li>
-            </ul>
+            <h4 style="color: var(--brand); margin-bottom: 16px;">Policies</h4>
+            <div class="link-list">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="RefundPolicy.html">Refund Policy</a>
+              <a href="TermsAndConditions.html">Terms and Conditions</a>
+              <a href="Disclaimer.html">Disclaimer</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-<section class="pricing-section">
-  <h2 class="section-title">Our Pricing</h2>
-  <div class="pricing-container">
-    
-    <div class="pricing-card">
-      <h3>Equity</h3>
-      <p class="price">₹9000</p>
-    </div>
 
-    <div class="pricing-card">
-      <h3>Futures (Index & Equity)</h3>
-      <p class="price">₹12000</p>
-    </div>
-
-    <div class="pricing-card">
-      <h3>Options (Index)</h3>
-      <p class="price">₹15000</p>
-    </div>
-
-    <div class="pricing-card">
-      <h3>Commodity</h3>
-      <p class="price">₹18000</p>
-    </div>
-
-  </div>
-</section>
-
-<style>
-.pricing-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #fff; /* White title */
-}
-
-.pricing-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.pricing-card {
-  background: #0b1a13; /* Dark grey card */
-  border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.pricing-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #f5f5f5; /* Light text */
-}
-
-.pricing-card .price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00c6ff; /* Neon blue */
-}
-
-.pricing-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.9);
-  background: linear-gradient(135deg, #00c6ff, #007bff);
-  color: #fff;
-}
-
-.pricing-card:hover .price {
-  color: #fff;
-}
-</style>
-
-<style>
-    :root{
-      --wa:#25D366;         /* WhatsApp green */
-      --bg:#0b1a13;         /* Dark header bg */
-      --txt:#0e1b14;        /* Body text */
-      --white:#fff;
-      --shadow: 0 10px 25px rgba(0,0,0,.15);
-      --radius: 18px;
-    }
-
-    /* --- Floating Toggle Button --- */
-    .wa-toggle{
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 64px; height: 64px;
-      border-radius: 50%;
-      background: var(--wa);
-      box-shadow: var(--shadow);
-      display: grid; place-items: center;
-      cursor: pointer;
-      border: none; outline: none;
-      z-index: 9999;
-      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-    }
-    .wa-toggle:hover{ transform: translateY(-2px); box-shadow: 0 14px 32px rgba(0,0,0,.22); }
-    .wa-toggle:active{ transform: translateY(0); }
-
-    /* gentle attention pulse */
-    .wa-toggle::after{
-      content: "";
-      position: absolute; inset: 0;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(37,211,102,.5);
-      animation: pulse 2.2s ease-out infinite;
-      pointer-events: none;
-    }
-    @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 70%{box-shadow:0 0 0 22px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
-
-    .wa-toggle svg{ width: 30px; height: 30px; fill: var(--white); }
-
-    /* --- Popup Panel --- */
-    .wa-panel{
-      position: fixed; right: 20px; bottom: 96px; /* sits above the button */
-      width: min(360px, calc(100vw - 40px));
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--white);
-      box-shadow: var(--shadow);
-      transform-origin: bottom right;
-      transform: scale(.98) translateY(6px);
-      opacity: 0; visibility: hidden;
-      transition: opacity .2s ease, transform .2s ease, visibility .2s;
-      z-index: 9999;
-    }
-    .wa-panel.open{
-      opacity: 1; visibility: visible; transform: scale(1) translateY(0);
-    }
-
-    .wa-header{
-      display: flex; align-items: center; gap: 12px;
-      background: linear-gradient(135deg, var(--wa), #1ebe5d);
-      color: var(--white);
-      padding: 14px 16px;
-    }
-    .wa-avatar{ width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.25); display:grid;place-items:center; }
-    .wa-title{ font: 600 15px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    .wa-sub{ font: 400 12px/1.3 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; opacity: .9; }
-
-    .wa-body{ padding: 14px 16px; color: var(--txt); font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f7fbf9; }
-    .wa-bubble{
-      display:inline-block; background:#fff; border-radius: 14px 14px 14px 4px; padding:10px 12px; box-shadow: 0 1px 0 rgba(0,0,0,.06);
-    }
-
-    .wa-actions{ display:flex; gap:10px; padding: 12px 16px 16px; background: #fff; }
-    .wa-actions a, .wa-actions button{
-      appearance: none; border: none; text-decoration: none; cursor: pointer;
-      padding: 10px 14px; border-radius: 12px; box-shadow: 0 1px 0 rgba(0,0,0,.06);
-      font: 600 14px/1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-    .wa-btn{
-      background: var(--wa); color: var(--white);
-    }
-    .wa-outline{ background: #f0f7f3; color: #0c4026; }
-
-    /* reduce motion preference */
-    @media (prefers-reduced-motion: reduce){
-      .wa-toggle{ transition: none; }
-      .wa-toggle::after{ animation: none; }
-      .wa-panel{ transition: none; }
-    }
-
-    /* Dark sites friendly: optional override using data-theme="dark" on <html> or body */
-    [data-theme="dark"] .wa-body{ background:#0e1713; color:#d5e6db; }
-    [data-theme="dark"] .wa-actions{ background:#0b1310; }
-    [data-theme="dark"] .wa-panel{ box-shadow: 0 10px 25px rgba(0,0,0,.4); }
-  </style>
-  <!-- Floating Toggle Button -->
-  <a href="https://wa.me/+919970101402"><button class="wa-toggle" id="waToggle" aria-label="Open WhatsApp chat">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.38c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.13-.6.13-.18.27-.7.91-.86 1.09-.16.18-.32.2-.58.06-.27-.14-1.11-.41-2.11-1.31a7.86 7.86 0 0 1-1.45-1.81c-.15-.26-.02-.4.12-.54.12-.12.27-.31.4-.46.13-.16.18-.25.27-.43.09-.18.05-.33-.02-.46-.07-.13-.59-1.46-.81-2-.22-.52-.43-.44-.6-.45l-.51-.01c-.17 0-.45.07-.69.33-.24.26-.9.9-.9 2.2 0 1.3.93 2.55 1.06 2.72.13.17 1.84 2.9 4.46 4.06.62.27 1.11.44 1.49.57.63.2 1.19.18 1.63.11.49-.07 1.53-.65 1.75-1.27.22-.62.21-1.14.15-1.25-.06-.11-.23-.18-.49-.31zM16 2.67C8.64 2.67 2.67 8.64 2.67 16c0 2.8.85 5.41 2.3 7.58L3.2 29.33l5.98-1.56A13.26 13.26 0 0 0 16 29.33c7.36 0 13.33-5.97 13.33-13.33S23.36 2.67 16 2.67zm7.67 19.29a6.77 6.77 0 0 1-1.17 1.83c-.55.61-1.27 1-2.06 1.13-.55.11-1.05.21-3.05-.63-1.6-.66-3.07-1.47-4.26-2.52-1.64-1.42-2.9-3.19-3.62-5.2-.36-.98-.38-1.77-.37-1.95.02-.83.27-1.65.74-2.33.2-.26.45-.57.74-.67.35-.13.68-.06.97.16.3.22.47.55.62.88.21.44.41.89.58 1.35.09.24.16.48.14.74-.02.28-.15.52-.32.73-.12.15-.25.28-.38.42-.12.14-.25.27-.36.42-.11.16-.12.31-.04.49.33.81.8 1.55 1.35 2.24.42.51.9.98 1.44 1.38.63.48 1.32.87 2.05 1.19.21.09.4.06.57-.1.3-.29.62-.77.95-1 .15-.1.3-.12.47-.07l2.8 1c.2.07.4.17.52.34.08.13.08.31.04.5z"/></svg>
-  </button></a>
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/+919970101402" class="wa-toggle" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.38c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.13-.6.13-.18.27-.7.91-.86 1.09-.16.18-.32.2-.58.06-.27-.14-1.11-.41-2.11-1.31a7.86 7.86 0 0 1-1.45-1.81c-.15-.26-.02-.4.12-.54.12-.12.27-.31.4-.46.13-.16.18-.25.27-.43.09-.18.05-.33-.02-.46-.07-.13-.59-1.46-.81-2-.22-.52-.43-.44-.6-.45l-.51-.01c-.17 0-.45.07-.69.33-.24.26-.9.9-.9 2.2 0 1.3.93 2.55 1.06 2.72.13.17 1.84 2.9 4.46 4.06.62.27 1.11.44 1.49.57.63.2 1.19.18 1.63.11.49-.07 1.53-.65 1.75-1.27.22-.62.21-1.14.15-1.25-.06-.11-.23-.18-.49-.31zM16 2.67C8.64 2.67 2.67 8.64 2.67 16c0 2.8.85 5.41 2.3 7.58L3.2 29.33l5.98-1.56A13.26 13.26 0 0 0 16 29.33c7.36 0 13.33-5.97 13.33-13.33S23.36 2.67 16 2.67zm7.67 19.29a6.77 6.77 0 0 1-1.17 1.83c-.55.61-1.27 1-2.06 1.13-.55.11-1.05.21-3.05-.63-1.6-.66-3.07-1.47-4.26-2.52-1.64-1.42-2.9-3.19-3.62-5.2-.36-.98-.38-1.77-.37-1.95.02-.83.27-1.65.74-2.33.2-.26.45-.57.74-.67.35-.13.68-.06.97.16.3.22.47.55.62.88.21.44.41.89.58 1.35.09.24.16.48.14.74-.02.28-.15.52-.32.73-.12.15-.25.28-.38.42-.12.14-.25.27-.36.42-.11.16-.12.31-.04.49.33.81.8 1.55 1.35 2.24.42.51.9.98 1.44 1.38.63.48 1.32.87 2.05 1.19.21.09.4.06.57-.1.3-.29.62-.77.95-1 .15-.1.3-.12.47-.07l2.8 1c.2.07.4.17.52.34.08.13.08.31.04.5z"/>
+    </svg>
+  </a>
 
   <!-- Footer -->
-   <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:10px"><div class="logo"></div><span>Abhijit Patil</span></div>
-        <div class="small">SEBI Registered Research Analyst
-SEBI Registration No.: INH000021304
-</div>
-      </div>
-      <div>
-        <b>Get In Touch</b>
-        <div class="small" style="margin-top:8px">
-          <div><a href="mailto:abhipatilca@hotmail.com">abhipatilca@hotmail.com</a></div>
-          <div><a href="tel:+919405669420">9405669420</a></div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="margin-bottom: 16px;">
+            <div class="logo"></div>
+            <span>Abhijit Patil</span>
+          </div>
+          <div class="small">
+            SEBI Registered Research Analyst<br>
+            <strong>SEBI Registration No.: INH000021304</strong><br>
+            <strong>BSE Enlistment No.: 6585</strong>
+          </div>
+        </div>
+        
+        <div>
+          <h4 style="color: var(--brand); margin-bottom: 16px;">Get In Touch</h4>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <a href="mailto:abhipatilca@hotmail.com">abhipatilca@hotmail.com</a>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+919405669420">9405669420</a>
+            </div>
+            <div class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Office B4/5, Omkar Plaza, Rajaram Road, Near ICICI Bank, E Ward, Shahupuri, Kolhapur, Maharashtra 416001, India</span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h4 style="color: var(--brand); margin-bottom: 16px;">SEBI Office Address</h4>
+          <div class="sebi-address">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2" style="margin-top: 2px; flex-shrink: 0;">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <div class="small">
+              Office Of Investor Assistance and Education, Securities and Exchange Board Of India, SEBI Bhavan, Plot No. C4-A, G Block, Bandra-Kurla Complex, Bandra (E), Mumbai- 400051
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <b>SEBI Office Address</b>
-        <div class="small" style="margin-top:8px">Office B4/5, Omkar Plaza, Rajaram Road,
-Near ICICI Bank, E Ward, Shahupuri,
-Kolhapur, Maharashtra 416001
-India</div>
+      
+      <div class="footer-bottom">
+        <div class="small">
+          ©️ Copyright 2025. All rights reserved. Patil Research.<br>
+          Investments in securities are subject to market risks. Please read all related documents carefully before investing.
+        </div>
+        <div class="small">
+          <strong>SEBI Reg No: INH000021304 • BSE Enlistment No: 6585</strong>
+        </div>
       </div>
-      <div>
-        <b>Important</b>
-        <div class="small" style="margin-top:8px">Investor Charter • SEBI Registration • Grievance Redressal • Disclaimer</div>
-      </div>
-    </div>
-    <div class="container" style="margin-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div class="small">©️ Copyright 2025. All rights reserved. Patil Research.
-Investments in securities are subject to market risks. Please read all related documents carefully before investing</div>
-      <div class="small">SEBI Reg No: INH000021304 • BSE Enlistment No: 6585</div>
     </div>
   </footer>
 
-  <script>
-    
+  <style>
+    /* Additional Enhanced Styles */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
 
-    // Smooth scroll for internal links
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(46,229,157,.08);
+      border-radius: 12px;
+      border-left: 3px solid var(--accent);
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      background: rgba(46,229,157,.12);
+      transform: translateX(8px);
+    }
+
+    .quote-box {
+      margin: 24px 0;
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(92,200,255,.1), rgba(138,107,255,.1));
+      border-radius: 16px;
+      border-left: 4px solid var(--brand);
+      position: relative;
+    }
+
+    .quote-box::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 60px;
+      color: var(--brand);
+      opacity: 0.3;
+      font-family: serif;
+    }
+
+    .values-list, .approach-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .value-item, .approach-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(255,255,255,.04);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .value-item:hover, .approach-item:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateX(4px);
+    }
+
+    .value-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(46,229,157,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .approach-item {
+      border-left: 3px solid var(--brand-2);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .pricing-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .featured {
+      position: relative;
+      border-color: var(--brand);
+      background: linear-gradient(145deg, rgba(92,200,255,.12), rgba(138,107,255,.08));
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -1px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--accent), #20d280);
+      color: #001b2e;
+      padding: 6px 16px;
+      border-radius: 0 0 12px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .contact-info {
+      margin: 20px 0;
+    }
+
+    .info-item, .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding: 12px;
+      background: rgba(255,255,255,.04);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover, .contact-item:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    .disclaimer-points {
+      margin: 24px 0;
+    }
+
+    .disclaimer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 12px;
+      background: rgba(255,107,107,.05);
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sebi-highlight {
+      margin: 24px 0;
+      padding: 20px;
+      background: rgba(92,200,255,.08);
+      border-radius: 12px;
+      border: 1px solid rgba(92,200,255,.2);
+    }
+
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .link-list a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .link-list a::before {
+      content: '→';
+      color: var(--brand);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .link-list a:hover {
+      background: rgba(255,255,255,.06);
+      transform: translateX(8px);
+    }
+
+    .link-list a:hover::before {
+      transform: translateX(4px);
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sebi-address {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(255,255,255,.04);
+      border-radius: 12px;
+    }
+
+    .footer-brand {
+      text-align: center;
+    }
+
+    /* Mobile-specific enhancements */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 0 40px;
+      }
+      
+      .hero h1 {
+        font-size: clamp(28px, 8vw, 42px);
+      }
+      
+      .pricing-card {
+        padding: 32px 24px;
+      }
+      
+      .pricing-card h3 {
+        font-size: 1.4rem;
+      }
+      
+      .pricing-card .price {
+        font-size: 2.4rem;
+      }
+      
+      .feature-list,
+      .values-list,
+      .approach-list {
+        gap: 12px;
+      }
+      
+      .feature-item,
+      .value-item,
+      .approach-item {
+        padding: 12px;
+      }
+      
+      .quote-box {
+        padding: 20px;
+      }
+      
+      .quote-box::before {
+        font-size: 40px;
+        top: -5px;
+        left: 16px;
+      }
+      
+      .grid-2 {
+        gap: 16px;
+      }
+      
+      .contact-header {
+        align-items: center;
+        text-align: center;
+      }
+      
+      .section-title {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 12px;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .hero-actions {
+        width: 100%;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .pricing-card {
+        padding: 24px 20px;
+      }
+      
+      .footer-grid {
+        gap: 24px;
+      }
+      
+      .footer-bottom {
+        gap: 16px;
+      }
+      
+      .mobile-menu {
+        padding: 16px;
+      }
+      
+      .mobile-menu a {
+        padding: 12px 16px;
+      }
+    }
+
+    /* Performance optimizations */
+    .card,
+    .pricing-card,
+    .btn {
+      will-change: transform;
+    }
+
+    /* Smooth scrolling enhancement */
+    html {
+      scroll-padding-top: 80px;
+    }
+  </style>
+
+  <script>
+    // Enhanced mobile menu toggle
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
+
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!expanded));
+      burger.classList.toggle('active');
+      menu.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!burger.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Enhanced smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const id = a.getAttribute('href');
@@ -573,35 +1780,157 @@ Investments in securities are subject to market risks. Please read all related d
           if(el){
             e.preventDefault();
             el.scrollIntoView({behavior:'smooth', block:'start'});
-            menu?.classList.add('hidden');
-            menuToggle.textContent = 'Menu';
-            menuToggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('open');
+            burger.classList.remove('active');
+            burger.setAttribute('aria-expanded', 'false');
           }
         }
       });
     });
 
+    // Enhanced form submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const form = event.target;
+      
+      // Add loading state
+      submitBtn.classList.add('loading');
+      submitBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        Sending...
+      `;
+      
+      // Simulate form submission
+      setTimeout(() => {
+        submitBtn.classList.remove('loading');
+        submitBtn.innerHTML = `
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+          Message Sent!
+        `;
+        
+        // Reset form
+        form.reset();
+        
+        // Show success message
+        const successMsg = document.createElement('div');
+        successMsg.style.cssText = `
+          position: fixed;
+          top: 100px;
+          right: 20px;
+          background: linear-gradient(135deg, var(--accent), #20d280);
+          color: #001b2e;
+          padding: 16px 20px;
+          border-radius: 12px;
+          font-weight: 600;
+          box-shadow: 0 10px 25px rgba(46,229,157,.3);
+          z-index: 10000;
+          animation: slideInRight 0.3s ease;
+        `;
+        successMsg.textContent = 'Thank you! We will get back to you shortly.';
+        document.body.appendChild(successMsg);
+        
+        // Remove success message and reset button
+        setTimeout(() => {
+          successMsg.remove();
+          submitBtn.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L2 8.5l9.5 4 4 9.5z"/>
+            </svg>
+            Start Learning
+          `;
+        }, 3000);
+      }, 2000);
+    }
 
-    
-  const burger = document.getElementById('burger');
-  const menu = document.getElementById('mobile-menu');
-
-  burger.addEventListener('click', () => {
-    const expanded = burger.getAttribute('aria-expanded') === 'true';
-    burger.setAttribute('aria-expanded', String(!expanded));
-    menu.classList.toggle('hidden');
-    burger.classList.toggle('active');
-  });
-
-  // Close menu on link click
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      burger.classList.remove('active');
-      burger.setAttribute('aria-expanded', 'false');
+    // Header scroll effect
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      
+      lastScrollY = currentScrollY;
     });
-  });
-</script>
 
+    // Intersection Observer for scroll animations
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, observerOptions);
+
+      // Observe all cards for animation
+      document.querySelectorAll('.card, .pricing-card').forEach(card => {
+        observer.observe(card);
+      });
+    }
+
+    // Add scroll progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      z-index: 10000;
+      transition: width 0.1s ease;
+    `;
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      progressBar.style.width = Math.min(scrolled, 100) + '%';
+    });
+
+    // Enhanced pricing card interactions
+    document.querySelectorAll('.pricing-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.background = 'linear-gradient(145deg, rgba(92,200,255,.15), rgba(138,107,255,.1))';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        if (!card.classList.contains('featured')) {
+          card.style.background = 'linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.02))';
+        }
+      });
+    });
+
+    // Add CSS animations keyframes
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
